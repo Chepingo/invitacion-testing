@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación de Boda</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+  <!-- SECCION DE INTERACCIÓN / PANTALLA DE BIENVENIDA -->
+  <div id="welcome-screen">
+    <div class="welcome-card">
+      <h2 class="welcome-title">¡Estás Invitado!</h2>
+      <div class="heart-separator">
+        <hr class="left-line">
+        <span class="heart">❤</span>
+        <hr class="right-line">
+      </div>
+      <button id="open-invitation-btn">Abrir invitación</button>
+    </div>
+  </div>
+
+
+  <!-- ============================ -->
+  <!-- Sección Principal / HERO -->
+  <!-- ============================ -->
+  <section class="hero">
+    <h1 class="titulo">Celebramos el día en que dos almas se unen</h1>
+    <div class="hero-content-wrapper">
+      <div class="bloque-video">
+        <video id="main-video" loop class="video-boda">
+          <source src="multimedia/video/Video para reel de Instagram invitación de boda elegante fotográfica.mp4" type="video/mp4">
+          Tu navegador no soporta videos.
+        </video>
+      </div>
+      <div class="bloque-imagen">
+        <img src="multimedia/fotos/general/imagen_presentacion.jpg" alt="Decoración" class="imagen-rosada">
+      </div>
+    </div>
+  </section>
+
+  <div class="separator-div"></div>
+
+  <!-- ============================ -->
+  <!-- Sección Detalles de Celebración -->
+  <!-- ============================ -->
+  <section class="celebration-details-section">
+    <h2 class="details-title">Detalles de la Celebración</h2>
+    <div class="title-underline"></div>
+
+    <div class="main-info-box">
+      <div class="info-card padrinos-card">
+        <h3 class="padrinos-title">En compañía de nuestros padrinos</h3>
+        <div class="padrinos-list">
+          <span class="padrino-name">Alejandra Sánchez Ramírez</span>
+          <span class="padrino-name">Alicia Guerrera García</span>
+        </div>
+      </div>
+
+      <div class="papas-container-split">
+        <div class="info-card papas-card">
+          <h3>Papas de la novia</h3>
+          <p class="padre-name">María Julia Flores Báez</p>
+          <p class="padre-name">Augusto Lavada Juárez</p>
+        </div>
+        <div class="info-card papas-card">
+          <h3>Papas del novio</h3>
+          <p class="padre-name">Gavina Flores García</p>
+          <p class="padre-name">Hugo Arcos Rodríguez</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="location-container">
+      <div class="info-card location-card">
+        <h3 class="location-title"><span class="church-icon">⛪</span> MISA</h3>
+        <div class="location-details">
+          <p>La misa será</p>
+          <p class="detail-highlight">en la capilla de la virgen de la luz</p>
+          <p>a las 3:00 pm</p><br>
+          <p class="detail-highlight">Calle 5 sur</p>
+          <p>entre 5 de mayo y 3 poniente</p>
+          <p>Tochtepec, Puebla.</p>
+        </div>
+      </div>
+
+      <div class="info-card location-card map-card">
+        <h3 class="location-title map-title"><span class="church-icon">📍</span> Ubicación de la Misa</h3>
+        <div class="map-embed-wrapper">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d839.772850898883!2d-97.82677139311464!3d18.840062966068043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cf887e480a7433%3A0x546d5c8ac319cc7d!2sAyuntamiento%20de%20Tochtepec!5e1!3m2!1ses-419!2smx!4v1762615527290!5m2!1ses-419!2smx"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="location-container salon-container">
+      <div class="info-card salon-location-card">
+        <h3 class="location-title"><span class="salon-icon">🎉</span> SALÓN</h3>
+        <div class="location-details">
+          <p>La recepción será en</p>
+          <p class="detail-highlight">"The Moon Paradise Salón"</p>
+          <p>a partir de las 6:00 pm</p><br>
+          <p class="detail-highlight">Calle 19 sur, Alhóndiga</p>
+          <p>75150, Amozoc de Hidalgo</p>
+          <p>Puebla.</p>
+        </div>
+      </div>
+      <div class="info-card salon-location-card map-card">
+        <h3 class="location-title map-title"><span class="salon-icon">📍</span> Ubicación del Salón</h3>
+        <div class="map-embed-wrapper">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234.03315597190522!2d-97.79910553764242!3d18.980547867900803!2m3!1f171.83303906369918!2f0!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x85cf8a892183c759%3A0xabea168de6e7b857!2sThe%20Moon%20Paradise%20Salon%20de%20Eventos!5e1!3m2!1ses-419!2smx!4v1762616462263!5m2!1ses-419!2smx"
+            width="400" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="separator-div"></div>
+
+  <!-- ============================ -->
+  <!-- Sección RSVP -->
+  <!-- ============================ -->
+<section class="rsvp-section">
+  <div class="rsvp-container">
+    <h2 class="rsvp-title">Confirmar Asistencia</h2>
+
+    <!-- FORMULARIO -->
+    <form id="rsvp-form" class="rsvp-form">
+
+      <!-- Nombre -->
+      <div class="floating-label-group">
+        <div class="input-group">
+          <span class="input-icon">👤</span>
+          <input 
+            type="text" 
+            placeholder="Nombre" 
+            id="guest-name" 
+            name="Nombre"
+            required
+          >
+        </div>
+        <label for="guest-name" class="floating-label">Nombre y apellido</label>
+      </div>
+
+      <!-- Total invitados -->
+      <div class="input-group">
+        <span class="input-icon">👥</span>
+        <input 
+          type="number" 
+          placeholder="Número total de invitados (Incluyéndote)"
+          min="1" 
+          id="total-guests"
+          name="TotalInvitados"
+          required
+        >
+      </div>
+
+      <!-- Niños -->
+      <div class="input-group">
+        <span class="input-icon">🧸</span>
+        <input 
+          type="number" 
+          placeholder="Número de niños (menores de 12)"
+          min="0"
+          id="children"
+          name="Niños"
+        >
+      </div>
+
+      <!-- Confirmación -->
+      <div class="input-group">
+        <span class="input-icon check-icon">✔️</span>
+        <select id="attendance" name="Asistencia" required>
+          <option value="" disabled selected>¿Asistirás?</option>
+          <option value="Confirmar asistencia">Confirmar asistencia</option>
+        </select>
+      </div>
+
+      <!-- BOTÓN -->
+      <button type="submit" class="submit-btn">
+        <span class="submit-arrow">►</span> ENVIAR CONFIRMACIÓN
+      </button>
+
+    </form>
+
+    <!-- MENSAJE -->
+    <div id="rsvp-message" style="
+      display:none;
+      margin-top:15px;
+      padding:12px;
+      font-weight:bold;
+      border-radius:6px;
+      text-align:center;
+    "></div>
+
+  </div>
+</section>
+
+
+
+
+
+  <!-- ============================ -->
+  <!-- Footer -->
+  <!-- ============================ -->
+  <footer class="main-footer">
+    <div class="footer-top">
+      <h4>¡No podemos esperar a celebrar contigo!</h4>
+    </div>
+    <div class="footer-bottom">
+      <p>Hecho por</p>
+      <p>• J. Miguel CS</p>
+    </div>
+  </footer>
+
+
+  <!-- ============================ -->
+  <!--  POP-UP DE Confirmar  (Flotante)  -->
+  <!-- Este bloque se inicializa con display: none; y el JS lo muestra. -->
+  <!-- ============================ -->
+  <div id="success-popup" style="display: none;">
+    <div class="popup-content">
+      <h2 class="rsvp-title" style="margin-bottom: 20px; color: #16a316;">¡Gracias confirmar!</h2>
+      <h3 style="color: #000000; font-size: 1.8rem; margin: 15px 0;">Te esperamos</h3>
+      <p style="font-size: 1.5rem; color: #000000; margin-top: 30px;">
+        El 20 de diciembre a las 03:00 pm para la ceremonia.
+      </p>
+      <p style="font-size: 1.2rem; color: #272727; margin-top: 10px;">
+        Revisa la invitación para conocer las ubicaciones.
+      </p>
+      </p>
+      <p style="font-size: 1.2rem; color: #272727; margin-top: 10px;">
+        Cualquier duda puedes contactar a la novia al número: 📞 246 593 86 08.
+      </p>
+      <button id="close-popup" class="submit-btn" style="margin-top: 30px;">Cerrar</button>
+    </div>
+  </div>
+
+
+<!-- ============================ -->
+<!-- BLOQUE CONSOLIDADO DE JAVASCRIPT -->
+<!-- ============================ -->
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    
+    // --- LÓGICA DE VIDEO Y PANTALLA DE BIENVENIDA ---
+    const video = document.getElementById('main-video');
+    const welcomeScreen = document.getElementById('welcome-screen');
+    const openBtn = document.getElementById('open-invitation-btn');
+
+    // 1. Asegurar que el video esté pausado al cargar
+    if (video) video.pause();
+
+    // 2. Manejar el clic del botón de bienvenida
+    if (openBtn && welcomeScreen && video) {
+        openBtn.addEventListener('click', () => {
+          // A. Ocultar la pantalla de bienvenida con transición
+          welcomeScreen.style.opacity = '0';
+          setTimeout(() => {
+              welcomeScreen.style.display = 'none';
+          }, 1000); 
+
+          // B. Reproducir el video y activar el sonido
+          video.play().catch(error => {
+            console.log("Error al intentar reproducir el video con sonido:", error);
+          });
+        });
+    }
+
+    // --- LÓGICA DE FORMULARIO RSVP Y POP-UP ---
+    const rsvpForm = document.getElementById('rsvp-form');
+    const successPopup = document.getElementById('success-popup');
+    const closeBtn = document.getElementById('close-popup');
+
+    if (rsvpForm) {
+        rsvpForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Detiene el envío real del formulario
+            
+            // Ocultar el formulario
+            // Se usa una pequeña transición para la opacidad para un mejor efecto visual
+            const rsvpContainer = rsvpForm.closest('.rsvp-container');
+            if (rsvpContainer) {
+                rsvpContainer.style.opacity = '0';
+                setTimeout(() => rsvpContainer.style.display = 'none', 500);
+            }
+
+            // Mostrar el pop-up flotante
+            successPopup.style.display = 'flex';
+        });
+    }
+    
+    // Lógica para cerrar el pop-up
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            successPopup.style.display = 'none';
+            
+            // Opcional: Recargar o mostrar el formulario de nuevo
+            const rsvpContainer = rsvpForm.closest('.rsvp-container');
+            if (rsvpContainer) {
+                rsvpContainer.style.display = 'block';
+                setTimeout(() => rsvpContainer.style.opacity = '1', 10);
+            }
+        });
+    }
+  });
+</script>
+
+
+<!-- ========== JS para enviar datos ========== -->
+<!-- ========== JS para enviar datos ========== -->
+<!-- ========== JS para enviar datos ========== -->
+<script>
+  const rsvpForm = document.getElementById("rsvp-form");
+  const rsvpMessage = document.getElementById("rsvp-message");
+
+  rsvpForm.addEventListener("submit", async function(e) {
+    e.preventDefault();
+    rsvpMessage.style.display = "block";
+    rsvpMessage.style.background = "beige";
+    rsvpMessage.style.color = "black";
+    rsvpMessage.textContent = "Enviando información...";
+    const formData = new FormData(rsvpForm);
+    const dataObj = {};
+    for (let [key, value] of formData.entries()) {
+      dataObj[key] = value;
+    }
+    try {
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwhBKUEjXJPwJAOItjOBgVk4UzoP5kl1hq_emNy5eTo85dM4jYCgy2Dco4RayKi-ta0nw/exec";
+      const res = await fetch(scriptURL, {
+        method: "POST",
+        redirect: "follow",
+        body: JSON.stringify(dataObj),
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8"
+        }
+      });
+      const data = await res.json();
+      if (data.status === "success") {
+        rsvpMessage.style.background = "#48c78e";
+        rsvpMessage.style.color = "white";
+        rsvpMessage.textContent = "Confirmación enviada correctamente ✔️";
+        rsvpForm.reset();
+      } else {
+        throw new Error(data.message || "Error al enviar");
+      }
+    } catch (err) {
+      console.error(err);
+      rsvpMessage.style.background = "#f14668";
+      rsvpMessage.style.color = "white";
+      rsvpMessage.textContent = "Error: " + err.message;
+    }
+    setTimeout(() => {
+      rsvpMessage.style.display = "none";
+    }, 4000);
+  });
+</script>
+
+
+</body>
+</html>

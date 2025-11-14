@@ -14,6 +14,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 
+
 /* =========================
    1. ESTILO GENERAL / BASE
    ========================= */
@@ -22,6 +23,113 @@ body {
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
+
+
+/* =========================
+   0.1. PANTALLA DE BIENVENIDA (SPLASH SCREEN) - REPLICA ESTILO NEGRO Y ORO
+   ========================= */
+
+#welcome-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* Fondo Negro Sólido */
+  z-index: 9999; /* Por encima de todo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-in-out; /* Transición para que desaparezca suavemente */
+}
+
+.welcome-card {
+  background-color: transparent; /* No tiene un fondo de tarjeta visible */
+  padding: 50px 80px;
+  text-align: center;
+  max-width: 90%;
+}
+
+/* Estilo para el texto "BIENVENIDOS" */
+.welcome-title {
+  /* Fuente que simula el estilo elegante y ancho */
+  font-family: serif; /* Mejor aproximación con fuentes por defecto */
+  font-size: 5rem; /* Tamaño grande */
+  font-weight: 700;
+  color: #c9a444; /* Color Oro Sólido */
+  letter-spacing: 12px; /* Amplio espaciado como en la imagen */
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  text-shadow: 0 0 10px rgba(201, 164, 68, 0.4);
+}
+
+/* Estilos del Separador de Corazón */
+.heart-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 40px 0; /* Espacio alrededor del separador */
+}
+
+.heart-separator .heart {
+  color: #c9a444; /* Corazón de color Oro */
+  font-size: 2.5rem;
+  line-height: 0;
+  margin: 0 15px; /* Espacio entre el corazón y las líneas */
+  position: relative;
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  transform: translateY(-5px); /* Ajuste vertical para centrar mejor con las líneas */
+}
+
+/* Estilos de las líneas del separador */
+.heart-separator hr {
+  border: none;
+  height: 2px;
+  background: #c9a444; /* Color Oro para las líneas */
+  width: 150px; /* Longitud de la línea */
+  margin: 0;
+  position: relative;
+}
+
+/* Para simular la curva elegante */
+.heart-separator .left-line {
+  transform: translateY(5px);
+}
+
+.heart-separator .right-line {
+  transform: translateY(-5px);
+}
+
+
+/* Estilo para el botón "Abrir invitación" */
+#open-invitation-btn {
+  padding: 15px 40px;
+  border: 0.5px solid #ffffff; /* Borde interno que no se ve por el fondo negro */
+  background-color: white; /* Fondo blanco */
+  color: #000; /* Texto negro */
+  font-weight: normal;
+  font-size: 1.4rem;
+  text-transform: none;
+  font-style: 'Times New Roman'; /* Texto en cursiva */
+  font-family: 'Times New Roman', cursive;
+  border-radius: 2px; /* Bordes rectos */
+  cursor: pointer;
+  transition: all 0.3s;
+  /* Simula el borde blanco que se ve en la imagen */
+  box-shadow: 0 0 0 3px white;
+}
+
+#open-invitation-btn:hover {
+  background-color: #f0f0f0;
+  color: #000;
+  transform: scale(1.02);
+  
+}
+
+
 
 /* =========================
    2. HERO (Sección principal con fondo)
@@ -41,7 +149,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 150px;
-  width: 100%;
+  width: 100%; 
 }
 
 /* Overlay semi-transparente sobre el fondo de jardín */
@@ -101,6 +209,7 @@ body {
   height: 100%;
   border-radius: 15px;
   object-fit: cover;
+  object-position: center;
 }
 
 /* ===== Bloque de imagen (lado derecho) ===== */
@@ -482,7 +591,7 @@ body {
    ========================= */
 .main-footer {
   width: 100%;
-  margin-top: 60px;
+  margin-top: 0px;
   font-family: "Poppins", sans-serif;
   color: white;
   text-align: center;
@@ -493,15 +602,15 @@ body {
 /* Parte superior del footer */
 .footer-top {
   background-color: #640000; /* vino elegante */
-  padding: 30px 15px;
+  padding: 50px 15px;
 }
 
 .footer-top h4 {
   font-family: 'Great Vibes', cursive; /* tipografía elegante */
   color: #fff;
-  font-size: 2.3rem;
+  font-size: 5rem;
   margin: 0;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1px;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
@@ -511,13 +620,13 @@ body {
   background-color: #111;
   padding: 15px 10px;
   color: #c7c7c7;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer-bottom p {
-  margin: 4px 0;
-  line-height: 1.4;
+  margin: 1px 0;
+  line-height: 1;
 }
 
 /* =========================
@@ -530,6 +639,40 @@ body {
   width: 100%;
   height: 100%;
   display: block;
+}
+
+/* RESPONSIVE para la tarjeta de bienvenida */
+@media (max-width: 768px) {
+  .welcome-card {
+    padding: 30px 40px;
+  }
+  .welcome-title {
+    font-size: 3rem;
+    letter-spacing: 8px;
+  }
+  .heart-separator hr {
+    width: 80px;
+  }
+  .heart-separator .heart {
+    font-size: 2rem;
+  }
+  #open-invitation-btn {
+    font-size: 1.2rem;
+    padding: 12px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-title {
+    font-size: 2rem;
+    letter-spacing: 5px;
+  }
+  .heart-separator hr {
+    width: 50px;
+  }
+  .heart-separator .heart {
+    font-size: 1.5rem;
+  }
 }
 
 /* =========================
@@ -619,3 +762,69 @@ body {
    - Si en el HTML sigues teniendo atributos style="" (otros),
      puedes moverlos aquí con selectores adecuados.
    ========================= */
+/* =========================
+   11. POP-UP DE CONFIRMACIÓN FLOTANTE (Asegura la flotabilidad)
+   ========================= */
+
+#success-popup {
+  position: fixed; /* CLAVE: Fijo sobre la ventana de navegación */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+  z-index: 10000; /* Asegura que esté por encima de todos los demás elementos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  /* Estilos para la tarjeta blanca flotante */
+  background: #fff;
+  border-radius: 15px;
+  padding: 50px 80px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  max-width: 500px; 
+  width: 90%;
+  text-align: center;
+}
+
+/* Reutilizar estilos y tipografía */
+.popup-content .rsvp-title {
+  color: #d51d3b; 
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+}
+
+/* Estilo para el botón de cerrar pop-up */
+#close-popup {
+    display: inline-block;
+    padding: 10px 30px;
+    background: none;
+    border: 2px solid #e91e63;
+    color: #d61f4a;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-family: "Poppins", sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+#close-popup:hover {
+    background: #e91e63;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Responsivo para el pop-up */
+@media (max-width: 600px) {
+    .popup-content {
+        padding: 30px 20px;
+    }
+    .popup-content h3 {
+        font-size: 1.5rem !important;
+    }
+}
