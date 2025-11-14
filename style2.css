@@ -130,7 +130,20 @@ body {
 }
 
 
+.titulo {
+  animation: desvanecer 4s ease-in-out 1 forwards;
+  animation-delay: 2s; /* espera antes de empezar a desaparecer */
+}
 
+@keyframes desvanecer {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 /* =========================
    2. HERO (Sección principal con fondo)
    ========================= */
