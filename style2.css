@@ -1,0 +1,621 @@
+/* ==========================================================================
+   style.css
+   Archivo CSS externo generado a partir de index.html
+   - Mantiene exactamente los selectores, propiedades y valores originales.
+   - Comentarios en español y secciones lógicas para facilitar mantenimiento.
+   - No se ha cambiado la apariencia ni el comportamiento.
+   ========================================================================== */
+
+/* =========================
+   0. Fuentes importadas
+   (La fuente 'Great Vibes' también está enlazada desde el <head>,
+    esta importación queda como respaldo si se cargara desde CSS.)
+   ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+
+/* =========================
+   1. ESTILO GENERAL / BASE
+   ========================= */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* =========================
+   2. HERO (Sección principal con fondo)
+   ========================= */
+
+/* Contenedor principal con imagen de fondo */
+.hero {
+  /* LA IMAGEN DE FONDO AHORA SOLO ESTÁ AQUÍ */
+  background: url("multimedia/fotos/fondo/imagefondo.png") center/cover no-repeat;
+
+  /* Aseguramos que abarque toda la vista inicial */
+  min-height: 100vh;
+  position: relative;
+
+  /* Propiedades de Flexbox originales */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  width: 100%;
+}
+
+/* Overlay semi-transparente sobre el fondo de jardín */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+/* Título principal (decorativo) */
+.titulo {
+  position: absolute;
+  top: 1vh;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  font-size: 3rem;
+  z-index: 110;
+  font-style: italic;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  font-family: 'Great Vibes', cursive;
+  margin: 0;
+  width: 90%;
+}
+
+/* Wrapper para el contenido dentro del hero (video + imagen) */
+.hero-content-wrapper {
+  position: relative;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+}
+
+/* ===== Bloque de video (lado izquierdo) ===== */
+.bloque-video {
+  width: 300px;
+  height: 600px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.062);
+  border-radius: 15px;
+  padding: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(54, 54, 54, 0.5);
+  position: relative;
+}
+
+.video-boda {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* ===== Bloque de imagen (lado derecho) ===== */
+.bloque-imagen {
+  width: 700px;
+  height: 600px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.imagen-rosada {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Separador negro que aparece entre secciones */
+.separator-div {
+  height: 50px;
+  background-color: black;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+}
+
+
+/* =========================
+   3. SECCIÓN: DETALLES DE LA CELEBRACIÓN
+   ========================= */
+
+.celebration-details-section {
+  background-color: #f7f3e8; /* Fondo amarillo pálido de la imagen */
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.details-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #8B5C5C; /* Tono de color principal */
+  margin-bottom: 0.5rem;
+}
+
+.title-underline {
+  width: 50%;
+  max-width: 400px;
+  height: 1px;
+  background-color: #8B5C5C;
+  margin: 0 auto 3rem;
+}
+
+/* Contenedor para manejar el split 50/50 de las tarjetas inferiores */
+.papas-container-split {
+  display: flex;
+  justify-content: center;
+  gap: 5px; /* Espacio entre las tarjetas de padres */
+  margin-top: 40px; /* Espacio entre la tarjeta de padrinos y la de padres */
+}
+
+/* ESTILO base para cada una de las tarjetas blancas */
+.info-card {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.4rem;
+  color: #333;
+  margin-top: 5px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+/* Estilo específico para la tarjeta superior de Padrinos */
+.padrinos-card {
+  max-width: 1000px; /* Ocupa todo el ancho disponible del main-info-box */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilos para las tarjetas de Papas (50% de ancho en desktop) */
+/* Nota: el HTML usa .papas-card para ambas tarjetas */
+.papas-card {
+  width: 25%; /* Ocupa casi la mitad del espacio en el contenedor split */
+  /* La sombra ya viene de .info-card */
+}
+
+/* Sección que contiene botones (si se usara en otro bloque) */
+.button-section {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Espacio entre botones */
+}
+
+.action-button {
+  padding: 12px 30px;
+  border: 2px solid #8B5C5C; /* Borde del botón */
+  background-color: white;
+  color: #8B5C5C;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #8B5C5C;
+  color: white;
+}
+
+/* Antigua sección de detalles (se mantiene para scroll) */
+.details-section {
+  background-color: white;
+  min-height: 50vh; /* Se reduce el alto */
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+
+/* =========================
+   4. SECCIÓN: MISA / UBICACIONES
+   ========================= */
+
+/* Contenedor Flex para la Misa y el Mapa */
+.location-container {
+  justify-content: center;
+  gap: 40px; /* Espacio entre los dos contenedores de Misa */
+  max-width: 1000px;
+  margin: 30px auto 30px; /* Margen superior e inferior para separarlo de padres y botones */
+}
+
+/* Estilo base para las dos tarjetas de Misa/Mapa */
+.location-card {
+  width: 45%; /* Ocupan casi la mitad del contenedor */
+  padding: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.location-title {
+  font-size: 1.5rem;
+  color: #8B5C5C; /* Color vino */
+  margin-bottom: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.church-icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-right: 10px;
+  color: #8B5C5C;
+}
+
+.location-details p {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.2rem;
+  color: #5a5a5a;
+  line-height: 1.5;
+}
+
+.location-details .detail-highlight {
+  font-size: 1.3rem;
+  color: #8B5C5C;
+  font-weight: bold;
+}
+
+/* Estilos específicos para el contenedor del mapa */
+.map-card {
+  padding-top: 2rem;
+}
+
+.map-embed-wrapper {
+  width: 100%;
+  /* Altura fija para el mapa. Crucial para evitar que se colapse */
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Reglas reutilizables para layout de location-container (misa) */
+.location-container {
+  display: flex;
+  flex-direction: row; /* Coloca los hijos en una fila */
+  justify-content: space-around; /* Distribuye el espacio entre el texto y el mapa */
+  align-items: flex-start; /* Alinea los elementos a la parte superior */
+  flex-wrap: wrap; /* Permite que se apilen en pantallas pequeñas (responsivo) */
+}
+
+/* Reglas para las tarjetas hija dentro de .location-container */
+.info-card.location-card {
+  /* Define un ancho máximo para asegurar que dos quepan en la fila */
+  max-width: 450px;
+  width: 100%; /* Permite que la tarjeta crezca hasta el max-width */
+  margin: 15px 10px; /* Margen para separarlas un poco */
+  box-sizing: border-box;
+}
+
+/* Margen superior para separarlo de la Misa (contenedor salón) */
+.salon-container {
+  margin-top: 50px;
+}
+
+/* Icono del Salón */
+.salon-icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-right: 10px;
+  color: #8B5C5C;
+}
+
+/* Variación específica para el layout del salón */
+.location-container.salon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Reglas para las tarjetas del salón */
+.info-card.salon-location-card {
+  max-width: 450px;
+  width: 100%;
+  margin: 15px 10px;
+  box-sizing: border-box;
+}
+
+/* 3. Ajuste: ocultar br innecesario dentro de salon container (se mantiene) */
+.location-container.salon-container > br {
+  display: none;
+}
+
+/* =========================
+   5. SECCIÓN RSVP (Confirmación)
+   ========================= */
+
+/* ====== SECCIÓN GENERAL ====== */
+.rsvp-section {
+  background: linear-gradient(to bottom right, #fdf6ef, #fae3cf);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  min-height: 100vh;
+}
+
+.rsvp-container {
+  background: #fff;
+  border-radius: 15px;
+  padding: 50px 80px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  max-width: 700px;
+  width: 100%;
+}
+
+.rsvp-title {
+  text-align: center;
+  color: #d51d3b;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* ====== GRUPOS DE INPUT ====== */
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #e8a4b8;
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.input-group:focus-within {
+  border-color: #e91e63;
+  box-shadow: 0 0 10px rgba(233, 30, 99, 0.2);
+}
+
+.input-icon {
+  font-size: 1.4rem;
+  margin-right: 12px;
+  color: #e091a2;
+}
+
+.input-group input,
+.input-group select {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background: transparent;
+}
+
+.input-group select {
+  appearance: none;
+  cursor: pointer;
+}
+
+/* ====== ETIQUETA FLOTANTE (animación estilo "Google") ====== */
+.floating-label-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.floating-label-group .input-group {
+  position: relative;
+  z-index: 2;
+}
+
+.floating-label {
+  position: absolute;
+  left: 50px;
+  top: 14px;
+  color: #d6657b;
+  font-size: 1rem;
+  background: white;
+  padding: 0 6px;
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+/* Efecto flotante: cuando hay focus o contenido */
+.floating-label-group input:focus ~ .floating-label,
+.floating-label-group input:not(:placeholder-shown) ~ .floating-label {
+  top: -8px;
+  left: 45px;
+  font-size: 0.75rem;
+  color: #e91e63;
+  font-weight: 600;
+}
+
+/* ====== BOTÓN DE ENVÍO ====== */
+.submit-btn {
+  display: block;
+  margin: 40px auto 0 auto;
+  padding: 12px 35px;
+  background: none;
+  border: 2px solid #e91e63;
+  color: #d61f4a;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #e91e63;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.submit-arrow {
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
+/* Efecto sombra suave al pasar por el contenedor RSVP */
+.rsvp-container:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   6. FOOTER
+   ========================= */
+.main-footer {
+  width: 100%;
+  margin-top: 60px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  border-top: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Parte superior del footer */
+.footer-top {
+  background-color: #640000; /* vino elegante */
+  padding: 30px 15px;
+}
+
+.footer-top h4 {
+  font-family: 'Great Vibes', cursive; /* tipografía elegante */
+  color: #fff;
+  font-size: 2.3rem;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Parte inferior del footer */
+.footer-bottom {
+  background-color: #111;
+  padding: 15px 10px;
+  color: #c7c7c7;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-bottom p {
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+/* =========================
+   7. REGLAS PARA IFRAME (mover inline style border:0)
+   - Centraliza el border:0 que estaba inline en los iframes
+   ========================= */
+.map-embed-wrapper iframe,
+.info-card.map-card iframe {
+  border: 0; /* correspondía a style="border:0;" */
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* =========================
+   8. RESPONSIVE (Media Queries combinadas)
+   - He combinado las reglas @media repetidas para mantener el mismo efecto
+   ========================= */
+
+/* Ajustes generales para pantallas <= 768px */
+@media (max-width: 768px) {
+
+  /* HERO: hacer stack vertical en pantallas pequeñas */
+  .hero-content-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .bloque-video,
+  .bloque-imagen {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    min-height: 350px;
+    border-radius: 15px;
+  }
+
+  .titulo {
+    font-size: 2rem;
+    top: 5vh;
+  }
+
+  /* Papás y padrinos: apilar y ajustar anchos */
+  .papas-container-split {
+    flex-direction: column; /* Apila las tarjetas de padres */
+    gap: 20px;
+  }
+
+  .padrinos-card,
+  .papas-card {
+    width: 90%; /* Ancho completo en móvil */
+    margin: 0 auto;
+  }
+
+  /* Location: apilar tarjetas y ajustar */
+  .location-container {
+    flex-direction: column; /* Apila las tarjetas de ubicación y mapa */
+    gap: 20px;
+  }
+
+  .location-card {
+    width: 90%; /* Ancho completo en móvil */
+    margin: 0 auto;
+  }
+
+  /* Ajustes al contenedor RSVP */
+  .rsvp-container {
+    padding: 2rem 1rem;
+    width: 90%;
+  }
+
+  .rsvp-title {
+    font-size: 1.5rem;
+  }
+
+  .floating-label {
+    left: 40px;
+  }
+}
+
+/* Ajustes puntuales para pantallas muy pequeñas (<=600px) */
+@media (max-width: 600px) {
+  .rsvp-container {
+    padding: 35px 25px;
+  }
+
+  .rsvp-title {
+    font-size: 1.7rem;
+  }
+
+  .floating-label {
+    left: 40px;
+  }
+}
+
+/* =========================
+   9. NOTAS / DOCUMENTACIÓN ADICIONAL
+   - Se conservaron selectores y reglas originales.
+   - Si en el HTML sigues teniendo atributos style="" (otros),
+     puedes moverlos aquí con selectores adecuados.
+   ========================= */
